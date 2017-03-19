@@ -6,7 +6,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>dataframe</module>
+        <module>core</module>
     </modules>
     <name>DataFrame Parent POM</name>
 
@@ -25,7 +25,6 @@
         <specs2-core.verison>2.4.16</specs2-core.verison>
         <scalatest.version>3.0.1</scalatest.version>
         <scopt.version>3.5.0</scopt.version>
-        <jackson-module-scala.version>2.8.4</jackson-module-scala.version>
 
         <!-- Spark -->
         <spark.version>2.1.0</spark.version>
@@ -34,9 +33,9 @@
         <beam.version>0.5.0</beam.version>
 
         <!-- Third party dependencies -->
-        <jackson.version>2.8.5</jackson.version>
-        <commons-lang.version>3.5</commons-lang.version>
+        <commons-lang.version>3.2.11</commons-lang.version>
         <commons-cli.version>1.3.1</commons-cli.version>
+        <json4s.version>3.5.0</json4s.version>
         <junit.version>4.11</junit.version>
         <yamlbeans.version>1.09</yamlbeans.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
@@ -132,6 +131,16 @@
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_${scala.compat.version}</artifactId>
             <version>${scalatest.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-native_${scala.compat.version}</artifactId>
+            <version>${json4s.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-jackson_${scala.compat.version}</artifactId>
+            <version>${json4s.version}</version>
         </dependency>
 
     </dependencies>
