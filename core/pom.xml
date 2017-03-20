@@ -32,6 +32,10 @@
         <!-- Beam -->
         <dependency>
             <groupId>org.apache.beam</groupId>
+            <artifactId>beam-sdks-java-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-direct-java</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>

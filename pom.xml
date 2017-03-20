@@ -30,7 +30,7 @@
         <spark.version>2.1.0</spark.version>
 
         <!-- Beam -->
-        <beam.version>0.5.0</beam.version>
+        <beam.version>0.6.0</beam.version>
 
         <!-- Third party dependencies -->
         <commons-lang.version>3.2.11</commons-lang.version>
@@ -66,21 +66,23 @@
         <!-- Beam -->
         <dependency>
             <groupId>org.apache.beam</groupId>
+            <artifactId>beam-sdks-java-core</artifactId>
+            <version>${beam.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-direct-java</artifactId>
             <version>${beam.version}</version>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
-        <!--
         <dependency>
             <groupId>org.apache.beam</groupId>
-            <artifactId>beam-runners-flink_${scala.compat.version}</artifactId>
+            <artifactId>beam-runners-flink_2.10</artifactId>
             <version>${beam.version}</version>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-google-cloud-dataflow-java</artifactId>
@@ -88,8 +90,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        -->
-
         <dependency>
             <groupId>org.apache.beam</groupId>
             <artifactId>beam-runners-spark</artifactId>
